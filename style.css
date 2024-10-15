@@ -1,0 +1,198 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box; /* Ensures padding doesn't affect element width */
+}
+
+/* Styling the body */
+body {
+    background-color: #f5f6fa;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling the header */
+header.main {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+header.main ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+header.main ul li {
+    margin: 0 15px;
+}
+
+header.main ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header.main ul li a:hover {
+    text-decoration: underline;
+    color: orange;
+}
+
+/* Styling for the email */
+p a {
+    font-size: 1em;
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+    margin-left: 150px;
+}
+
+/* Centering the application form */
+.application-form {
+    background-color: white;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    margin-top: 60px; /* To push the form down, so it doesn’t hide behind the header */
+}
+
+/* Styling the form elements */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form fieldset {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form legend {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 0 10px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Styling checkboxes and radio buttons */
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Styling the submit button */
+.btns {
+    text-align: center;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1200px) {
+    header.main ul {
+        justify-content: space-around;
+    }
+    header.main ul li {
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    header.main ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .application-form {
+        width: 90%;
+    }
+
+    form fieldset {
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header.main ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    header.main ul li {
+        margin: 5px 0;
+    }
+
+    .application-form {
+        padding: 20px;
+        width: 100%;
+    }
+
+    form fieldset {
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    select,
+    textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    input[type="submit"] {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
