@@ -8,31 +8,33 @@
 
 /* Styling the body */
 body {
-    background-color: #f5f6fa;
+    background-color: #fafaf5;
     background-position: center;
     width: 100%;
-    min-height: 100vh;
+    min-height: 20vh;
     margin: auto;
-    padding: 20px;
+    padding: 70px 20px 20px 20px; /* Add top padding to push content below the header */
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
+body.about {
+    display: contents;
+}
 /* Styling the header */
 header.main {
     position: fixed;
     top: 0;
     width: 100%;
     background-color: #333;
-    padding: 10px 0;
+    padding: 20px 0;
     z-index: 1000;
 }
 
 header.main ul {
     list-style-type: none;
     display: flex;
-    justify-content: center;
+    justify-content: left;
 }
 
 header.main ul li {
@@ -62,13 +64,15 @@ p a {
 /* Centering the application form */
 .application-form {
     background-color: white;
+    background-position: top;
     padding: 30px;
     width: 100%;
     max-width: 600px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     border: 1px solid #e0e0e0;
-    margin-top: 60px; /* To push the form down, so it doesn’t hide behind the header */
+    justify-content: flex-start;
+    margin-top: 100px; /* To push the form down, so it doesn’t hide behind the header */
 }
 
 /* Styling the form elements */
@@ -95,6 +99,7 @@ label {
     flex-direction: column;
     margin-bottom: 15px;
 }
+
 
 input[type="text"],
 input[type="email"],
@@ -129,7 +134,7 @@ input[type="submit"] {
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
-}
+}  
 
 input[type="submit"]:hover {
     background-color: #45a049;
@@ -138,6 +143,8 @@ input[type="submit"]:hover {
 /* Media queries for responsive design */
 @media (max-width: 1200px) {
     header.main ul {
+        padding-top: 2%;
+        padding: 0.3% 0;
         justify-content: space-around;
     }
     header.main ul li {
@@ -147,6 +154,7 @@ input[type="submit"]:hover {
 
 @media (max-width: 768px) {
     header.main ul {
+        padding-top: 1%;
         flex-direction: column;
         align-items: center;
     }
@@ -163,17 +171,22 @@ input[type="submit"]:hover {
 
 @media (max-width: 480px) {
     header.main ul {
+        
+        padding-top: 20%;
+
         flex-direction: column;
-        padding: 0;
+        align-items: left;
     }
 
-    header.main ul li {
-        margin: 5px 0;
+    header.main ul li a {
+        justify-content: left;
+                
     }
 
     .application-form {
-        padding: 20px;
+        padding: 40px;
         width: 100%;
+        padding-top: 10%;
     }
 
     form fieldset {
@@ -181,18 +194,207 @@ input[type="submit"]:hover {
         padding: 10px;
     }
 
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="date"],
-    select,
-    textarea {
-        font-size: 14px;
-        padding: 8px;
-    }
 
-    input[type="submit"] {
-        padding: 8px 15px;
-        font-size: 14px;
-    }
+
 }
+.names{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px
+}
+.name label{
+    flex:1;
+}
+.name input{
+    width: 100%;
+}
+.image{
+    float: right;
+    margin-right: 200px;
+    border: 5px solid red;
+}
+.jobs-des {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns content towards the top */
+    align-items: center; /* Centers content horizontally */
+    min-height: 100vh;
+    padding-top: 80px; /* Adds space from the top of the page */
+    text-align: center;
+}
+
+.jobs-des h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0; /* Ensures no extra space is above the heading */
+    padding-top: 20px; /* Optional: Adds a bit of space from the header */
+}
+.index{
+    display:inline-block;
+}
+.index h1{
+    display: flex;
+    justify-content: center;
+}
+.hero{
+    padding: 0;
+    margin: 0;
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+.hero-content {
+    max-width: 300px;
+    margin:0;
+}
+.connecting{
+    width: 200px;
+    border-radius: 8px;
+}
+.tele{
+    width: 200px;
+    border-radius: 8px;
+}
+.hero .logo{
+    width: 150px;
+    height:auto;
+    padding: auto;
+    float: right;
+    border-radius: 8px;
+}
+
+.hero h2{
+    float: left;
+}
+.features{
+    display: flex;
+    text-align: left;
+    float: center;
+    padding-right: 200px;
+    flex-direction: column;
+    padding-top: 5%;
+    padding-left: 40px;
+}
+.features h2{
+    flex-direction: column;
+    margin: 5px;
+}
+.features li{
+    max-width: 300px;
+}
+.info{    
+    padding-top: 20px;
+}
+/* Definition List Styling */
+dl {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+dt {
+    width: 150px; /* Set the width for the <dt> element */
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 20px; /* Space between dt and dd */
+    flex-grow: 1; /* Allows the dd to take the remaining space */
+}
+
+/* Image and Figure Styling */
+figure {
+    float: right; /* Float the figure to the right */
+    margin: 0 0 20px 20px; /* Add margin for spacing */
+}
+
+figure img {
+    border: 3px solid #333; /* Shorthand for border */
+    width: 150px;
+    height: auto;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Table Styling */
+table {
+    margin: 20px auto; /* Center the table within the section */
+    margin-left: 10%;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #333;
+}
+
+th {
+    font-weight: bold; /* Make table headings bold */
+    background-color: #f2f2f2; /* Light background for table headers */
+}
+
+td {
+    background-color: #e0e0e0; /* Cell background color in hexadecimal */
+}
+
+/* Email Styling similar to Definition List */
+p a {
+    display: inline-block;
+    margin-left: 150px; /* Align similar to definition list <dt> */
+    font-size: 1em;
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+figcaption {
+    margin-right: 200px
+}
+
+.jobs-des h1{
+    font: small-caps bold 2em 'Arial', sans-serif;
+    text-align: center;
+}
+
+/* Styling for <aside> */
+aside {
+    width: 25%;
+    float: right;
+    margin: 20px;
+    padding: 15px;
+    float: right ;
+    border: 2px solid #4CAF50; /* Colored border */
+    background-color: #f9f9f9;
+}
+
+
+/* Trick: */
+body {
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+body::after {
+content: '';
+display: block;
+height: 50px;
+/* Set same as footer's height */
+}
+
+footer {
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 30px;
+}
+footer p{
+    justify-content: space-between;
+}
+

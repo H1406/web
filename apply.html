@@ -12,20 +12,18 @@
         <li><a href="jobs.html">Jobs</a></li>
         <li><a href="apply.html">Apply</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="enhancements.html">Enhancements</a></li>
     </ul>
 </header>
 
 <form id = "apply-form" method="POST" action = "https://mercury.swin.edu.au/it000000/formtest.php">
     <fieldset>
       <legend>Job</legend>
-      <label>
-        Application for *
-        <input type="text" required = "required" pattern = "^\d{5}" oninvalid="this.setCustomValidity('Job ID is incorrect! Please try again!!!')" maxlength="5">
-      </label>
+      <label for="JobID"> Application for * <input type="text" name="JobID" required pattern="\d{5}"</label>
     </fieldset>
     <fieldset>
       <legend>Personal data</legend>
-      <section >
+      <section class = "names">
         <label>
           First name *
           <input type="text" name="First name" required>
@@ -97,11 +95,12 @@
             <label for="team">Teamworking skills
                 <input type="checkbox" name="skills[]" value="Teamworking">
             </label>
+            <label for="other_skills">Other skills
+              <textarea name="other_skills"  cols="30" rows="10" placeholder="Example: Problem Solving Skill"></textarea>
         </fieldset>
       </section>
     </fieldset>
     <section class="btns">
-      <input type="text" name="_gotcha" value="" style="display:none;">
       <input type="submit" value="Submit application">
     </section>
   </form>
