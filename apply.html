@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
     <title>Application Form</title>
 </head>
 
@@ -19,49 +19,49 @@
 <form id = "apply-form" method="POST" action = "https://mercury.swin.edu.au/it000000/formtest.php">
     <fieldset>
       <legend>Job</legend>
-      <label for="JobID"> Application for * <input type="text" name="JobID" required pattern="\d{5}"</label>
+      <label for="JobID"> Application for * <input type="text" id="JobID" required pattern="\d{5}"> </label>
     </fieldset>
     <fieldset>
       <legend>Personal data</legend>
       <section class = "names">
-        <label>
+        <label for="firstname">
           First name *
-          <input type="text" name="First name" required>
+          <input type="text" id="firstname" required>
         </label>
-        <label>
+        <label for="familyname">
           Family name *
-          <input type="text" name="Family name" required>
+          <input type="text" id="familyname" required>
         </label>
       </section>
       <section>
         <fieldset>
             <legend>Gender</legend>
             <p>
-                <label for="gender">Male
-                    <input type="radio" name=genders[] value="Male" checked required >
+                <label for="male">Male
+                    <input type="radio" name=genders[] id="male" value="Male" checked required >
                 </label>
-                <label for="gender">Female
-                    <input type="radio" name=genders[] value = "Female">
+                <label for="female">Female
+                    <input type="radio" id="female" name=genders[] value = "Female">
                 </label>
-                <label for="gender">Others
-                    <input type="radio" name=genders[] value = "Others">
+                <label for="others">Others
+                    <input type="radio" id="others" name=genders[] value = "Others">
                 </label>
             </p>
         </fieldset>
-        <label>
+        <label for="dob">
           Date of birth
-          <input type="date" name="Date of birth">
+          <input type="date" id="dob">
         </label>
       </section>
       <section>
         <label for="address">Street Address 
-            <input type="text" maxlength="40" required>
+            <input type="text" id="address" maxlength="40" required>
         </label>
         <label for="town">Suburb/Town
-            <input type="text" maxlength="40" required>
+            <input type="text" maxlength="40" id="town" required>
         </label>
         <label for="postcode">Postcode
-            <input type="text" required pattern="\d{4}" maxlength="4" size="10">
+            <input type="text" required pattern="\d{4}" id="postcode" maxlength="4" size="10">
         </label>
       </section>
       <section>
@@ -79,24 +79,25 @@
         </select>
       </section>
       <section>
-        <label for="e-mail">Email Address
-            <input type="text" required placeholder="abc@example.com">
+        <label for="email">Email Address
+            <input type="text" id="email" required placeholder="abc@example.com">
         </label>
         <label for="phone">Phone Number
-            <input type="text" required pattern="(\d\s?){8,12}" placeholder="123-456-789" maxlength="12">
+            <input type="text" id="phone" required pattern="(\d\s?){8,12}" placeholder="123-456-789" maxlength="12">
         </label>
       </section>
       <section>
         <fieldset>
             <legend>Skills</legend>
             <label for="com">Communication skills
-                <input type="checkbox"  name='skills[]' value="Communication skills" checked="checked" required>
+                <input type="checkbox" id="com" name='skills[]' value="Communication skills" checked="checked" required>
             </label>
             <label for="team">Teamworking skills
-                <input type="checkbox" name="skills[]" value="Teamworking">
+                <input type="checkbox" id="team" name="skills[]" value="Teamworking">
             </label>
             <label for="other_skills">Other skills
-              <textarea name="other_skills"  cols="30" rows="10" placeholder="Example: Problem Solving Skill"></textarea>
+              <textarea name="other_skills" id="other_skills" cols="30" rows="10" placeholder="Example: Problem Solving Skill"></textarea>
+              </label>
         </fieldset>
       </section>
     </fieldset>
