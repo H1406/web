@@ -36,29 +36,13 @@
     background-color: var(--toggle-bg-color);
     color: var(--toggle-text-color);
     border-radius: 20px;
+    color: black;
     transition: background-color 0.3s, color 0.3s;
 }
 .theme-switch:checked + .theme-toggle {
-    header.main {
-        background-color: white;
-    }
     background-color: #333;
     color: white;
   }
-/* Styling the body */
-body {
-    background-color: var(--bg-color);
-    background-position: center;
-    width: 100%;
-    min-height: 20vh;
-    margin: auto;
-    padding: 70px 20px 20px 20px; /* Add top padding to push content below the header */
-    display: flex;
-    justify-content: center;
-    transition: background-color 0.3s, color 0.3s;
-
-}
-
 body.about {
     display: contents;
 }
@@ -68,7 +52,7 @@ header.main {
     top: 0;
     width: 100%;
     background-color: var(--header-bg-color);
-    padding: 20px 0;
+    padding: 10px 0;
     z-index: 1000;
 }
 
@@ -79,7 +63,7 @@ header.main ul {
 }
 
 header.main ul li {
-    margin: 0 15px;
+    margin:  15px;
 }
 
 header.main ul li a {
@@ -123,6 +107,8 @@ p a {
 form {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 form fieldset {
@@ -130,12 +116,13 @@ form fieldset {
     padding: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    padding: auto;
 }
 
 form legend {
     font-weight: bold;
     font-size: 1.1em;
-    padding: 0 10px;
+    padding: 20px 10px;
 }
 
 label {
@@ -168,6 +155,7 @@ input[type="radio"] {
 /* Styling the submit button */
 .btns {
     text-align: center;
+    padding-bottom: 10px;
 }
 
 input[type="submit"] {
@@ -506,12 +494,14 @@ footer p{
     font-size: 50px;
     display: flex;
     justify-content: center;
+    margin-top: 5%;
 }
 .enhance ol{
     font-size: 20px;
     float: left;
     max-width: fit-content;
-    margin: 0;
+    padding-left: 5%;
+    
 }
 .jobs-des ul{
     list-style-type: none;
