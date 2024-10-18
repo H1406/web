@@ -9,23 +9,18 @@
 :root {
     --bg-color: white;
     --text-color: black;
+    --header-bg-color: #333;
+    --header-text-color: white;
+    --toggle-bg-color: #ddd;
+    --toggle-text-color: black;
 }
-.theme-switch:checked ~ body{
-    --bg-color:black;
+.theme-switch:checked ~ body {
+    --bg-color: #333;
     --text-color: white;
-}
-/* Styling the body */
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    background-position: center;
-    width: 100%;
-    min-height: 20vh;
-    margin: auto;
-    padding: 70px 20px 20px 20px; /* Add top padding to push content below the header */
-    display: flex;
-    justify-content: center;
-    transition: background-color 0.3s, color 0.3s;
+    --header-bg-color: white; /* Change header background color */
+    --header-text-color: black; /* Change header text color */
+    --toggle-bg-color: #333; /* Change toggle background color */
+    --toggle-text-color: white; /* Change toggle text color */
 }
 .theme{
     position: fixed;
@@ -35,18 +30,35 @@ body {
 .theme-switch{
     display: none;
 }
-.theme-toggle{
+.theme-toggle {
     cursor: pointer;
     padding: 10px 20px;
-    background-color: #ddd;
+    background-color: var(--toggle-bg-color);
+    color: var(--toggle-text-color);
     border-radius: 20px;
-    color: black;
     transition: background-color 0.3s, color 0.3s;
 }
 .theme-switch:checked + .theme-toggle {
+    header.main {
+        background-color: white;
+    }
     background-color: #333;
     color: white;
   }
+/* Styling the body */
+body {
+    background-color: var(--bg-color);
+    background-position: center;
+    width: 100%;
+    min-height: 20vh;
+    margin: auto;
+    padding: 70px 20px 20px 20px; /* Add top padding to push content below the header */
+    display: flex;
+    justify-content: center;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
 body.about {
     display: contents;
 }
@@ -55,7 +67,7 @@ header.main {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #333;
+    background-color: var(--header-bg-color);
     padding: 20px 0;
     z-index: 1000;
 }
@@ -71,11 +83,14 @@ header.main ul li {
 }
 
 header.main ul li a {
-    color: white;
+    color: var(--header-text-color);
     text-decoration: none;
     font-weight: bold;
 }
-
+header.main ul li a.active {
+    color: red;
+  }
+  
 header.main ul li a:hover {
     text-decoration: underline;
     color: orange;
@@ -184,8 +199,7 @@ input[type="submit"]:hover {
 @media (max-width: 768px) {
     header.main ul {
         padding-top: 1%;
-        flex-direction: column;
-        align-items: center;
+
     }
 
     .application-form {
@@ -196,6 +210,13 @@ input[type="submit"]:hover {
         margin-bottom: 15px;
         padding: 10px;
     }
+    @media (max-width: 768px) {
+        aside {
+          float: none;
+          width: 100%;
+          margin: 10px 0;
+        }
+      }
 }
 
 @media (max-width: 480px) {
@@ -242,21 +263,87 @@ input[type="submit"]:hover {
     margin-right: 200px;
     border: 5px solid red;
 }
+/* Styling for the body and job section */
 .jobs-des {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Aligns content towards the top */
-    align-items: center; /* Centers content horizontally */
+    justify-content: flex-start;
+    align-items: center;
     min-height: 100vh;
-    padding-top: 80px; /* Adds space from the top of the page */
+    padding-top: 100px; /* Adds space from the top of the page */
     text-align: center;
 }
 
 .jobs-des h1 {
-    font-size: 2.5em;
+    font: small-caps bold 2.5em 'Arial', sans-serif;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.jobs-des h2 {
+    font-size: 2em;
+    margin: 20px 0;
+    color: #333;
+}
+
+.jobs-des h3 {
+    font-size: 1.5em;
+    color: #4CAF50;
+    margin: 20px 0;
+}
+
+.jobs-des h4 {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.jobs-des p {
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.jobs-des ul,
+.jobs-des ol {
+    margin-left: 40px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.jobs-des ul li {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.jobs-des ol li {
+    margin-bottom: 10px;
+    font-size: 1em;
     font-weight: bold;
-    margin: 0; /* Ensures no extra space is above the heading */
-    padding-top: 20px; /* Optional: Adds a bit of space from the header */
+}
+
+/* Styling Definition List */
+dl {
+    display: flex;
+    flex-wrap: wrap;
+    
+    margin-bottom: 20px;
+}
+
+dt {
+    width: 200px;
+    font-weight: bold;
+    color: #555;
+    padding: 10px 0;
+}
+
+dd {
+    margin-left: 20px;
+    flex-grow: 1;
+    padding: 10px 0;
+    color: #333;
+    font-size: 1em;
 }
 .index{
     display:inline-block;
@@ -323,23 +410,6 @@ input[type="submit"]:hover {
     padding-top: 20px;
     padding-left: 10px;
 }
-/* Definition List Styling */
-dl {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-dt {
-    width: 150px; /* Set the width for the <dt> element */
-    font-weight: bold;
-}
-
-dd {
-    margin-left: 20px; /* Space between dt and dd */
-    flex-grow: 1; /* Allows the dd to take the remaining space */
-}
 
 /* Image and Figure Styling */
 figure {
@@ -383,14 +453,15 @@ td {
 }
 
 /* Email Styling similar to Definition List */
+/* Styling for the email */
 p a {
-    display: inline-block;
-    margin-left: 150px; /* Align similar to definition list <dt> */
     font-size: 1em;
     text-decoration: none;
     color: blue;
     font-weight: bold;
+    margin-left: 150px;
 }
+
 figcaption {
     margin-right: 200px
 }
@@ -412,26 +483,18 @@ aside {
 }
 
 
-/* Trick: */
-body {
-    min-height: 100vh;
-    margin: 0;
-    position: relative;
-}
-
-body::after {
-content: '';
-display: block;
-height: 50px;
-/* Set same as footer's height */
-}
 
 footer {
-position: absolute;
-bottom: 0;
-width: 100%;
-height: 30px;
-}
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    }
+
+h2:hover {
+    color: #4CAF50;
+    cursor: pointer;
+  }
 footer p{
     justify-content: space-between;
 }
@@ -472,6 +535,8 @@ a:hover{
 .timetable{
     border: 1;
 }
-.about h1{
-    padding-top: 60px;
+.about_title h1{
+    background-color: red;
+    padding-top: 500px;
+    color:red
 }
