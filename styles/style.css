@@ -5,10 +5,19 @@
     font-family: sans-serif;
     box-sizing: border-box; /* Ensures padding doesn't affect element width */
 }
-
+/*Styling a changing theme button*/
+:root {
+    --bg-color: white;
+    --text-color: black;
+}
+.theme-switch:checked ~ body{
+    --bg-color:black;
+    --text-color: white;
+}
 /* Styling the body */
 body {
-    background-color: #fafaf5;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     background-position: center;
     width: 100%;
     min-height: 20vh;
@@ -16,8 +25,28 @@ body {
     padding: 70px 20px 20px 20px; /* Add top padding to push content below the header */
     display: flex;
     justify-content: center;
+    transition: background-color 0.3s, color 0.3s;
 }
-
+.theme{
+    position: fixed;
+    top:15%;
+    right:2%;
+}
+.theme-switch{
+    display: none;
+}
+.theme-toggle{
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #ddd;
+    border-radius: 20px;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+}
+.theme-switch:checked + .theme-toggle {
+    background-color: #333;
+    color: white;
+  }
 body.about {
     display: contents;
 }
@@ -442,4 +471,7 @@ a:hover{
 }
 .timetable{
     border: 1;
+}
+.about h1{
+    padding-top: 60px;
 }
