@@ -449,7 +449,7 @@ footer {
     height: 2.5rem;
 }
 .footer-jobs {
-   bottom: -225%;    
+   position: relative;    
 }
 h2:hover {
     color: #4CAF50;
@@ -510,8 +510,6 @@ a:hover{
     padding-top: 1%;
     padding-bottom: 2%;
 }
-
-
 button[type="submit"]{
     margin-top:10px;
     text-align: center;

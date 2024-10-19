@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/x-icon" href="\images\favicon.png" >
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" >
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <title>Application Form</title>
 </head>
@@ -20,18 +20,18 @@
 <form id = "apply-form" method="POST" action = "https://mercury.swin.edu.au/it000000/formtest.php">
     <fieldset class="JobID" >
       <legend>Job</legend>
-      <label for="JobID"> Application for * <input type="text" id="JobID" required pattern="\d{5}"> </label>
+      <label for="JobID"> Application for * <input type="text" id="JobID" required maxlength="5"> </label>
     </fieldset>
     <fieldset>
       <legend>Personal data</legend>
       <section class = "names">
         <label for="firstname">
           First name *
-          <input type="text" id="firstname" required>
+          <input type="text" id="firstname" required maxlength="20">
         </label>
         <label for="familyname">
           Family name *
-          <input type="text" id="familyname" required>
+          <input type="text" id="familyname" required maxlength="20">
         </label>
       </section>
       <section>
@@ -51,7 +51,7 @@
         </fieldset>
         <label for="dob">
           Date of birth
-          <input type="date" id="dob">
+          <input type="date" id="dob" pattern="\d{4}-\d{2}-\d{2}">
         </label>
       </section>
       <section>
