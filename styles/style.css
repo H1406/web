@@ -518,3 +518,7 @@ button[type="submit"]{
     text-align: center;
     font-size: 16px;
 }
+.updateform{
+    text-decoration: underline;
+    margin: auto;
+}
