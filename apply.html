@@ -20,18 +20,18 @@
 <form id = "apply-form" method="POST" action = "https://mercury.swin.edu.au/it000000/formtest.php">
     <fieldset class="JobID" >
       <legend>Job</legend>
-      <label for="JobID"> Application for * <input type="text" id="JobID" required maxlength="5"> </label>
+      <label for="JobID"> Application for * <input type="text" id="JobID" maxlength="5" value="JobID" required > </label>
     </fieldset>
     <fieldset>
       <legend>Personal data</legend>
       <section class = "names">
         <label for="firstname">
           First name *
-          <input type="text" id="firstname" required maxlength="20">
+          <input type="text" id="firstname" maxlength="20" value="first_name" required >
         </label>
         <label for="familyname">
           Family name *
-          <input type="text" id="familyname" required maxlength="20">
+          <input type="text" id="familyname"  maxlength="20" value="family_name" required>
         </label>
       </section>
       <section>
@@ -51,18 +51,18 @@
         </fieldset>
         <label for="dob">
           Date of birth
-          <input type="date" id="dob" pattern="\d{4}-\d{2}-\d{2}">
+          <input type="date" id="dob" pattern="\d{4}-\d{2}-\d{2}" value="DOB" required>
         </label>
       </section>
       <section>
         <label for="address">Street Address 
-            <input type="text" id="address" maxlength="40" required>
+            <input type="text" id="address" maxlength="40" value="Address" required>
         </label>
         <label for="town">Suburb/Town
-            <input type="text" maxlength="40" id="town" required>
+            <input type="text" maxlength="40" id="town" value="Town" required>
         </label>
         <label for="postcode">Postcode
-            <input type="text" required pattern="\d{4}" id="postcode" maxlength="4" size="10">
+            <input type="text"  pattern="\d{4}" id="postcode" maxlength="4" size="10" value="Postcode" required>
         </label>
       </section>
       <section>
@@ -81,10 +81,10 @@
       </section>
       <section>
         <label for="email">Email Address
-            <input type="text" id="email" required placeholder="abc@example.com">
+            <input type="text" id="email" required placeholder="abc@example.com" value="Email">
         </label>
         <label for="phone">Phone Number
-            <input type="text" id="phone" required pattern="(\d\s?){8,12}" placeholder="123-456-789" maxlength="12">
+            <input type="text" id="phone" required pattern="(\d\s?){8,12}" placeholder="123-456-789" maxlength="12" value="Phone Number">
         </label>
       </section>
       <section>
@@ -97,7 +97,7 @@
                 <input type="checkbox" id="team" name="skills[]" value="Teamworking">
             </label>
             <label for="other_skills">Other skills
-              <textarea name="other_skills" id="other_skills" cols="30" rows="10" placeholder="Example: Problem Solving Skill"></textarea>
+              <textarea name="other_skills" id="other_skills" cols="30" rows="10" placeholder="Example: Problem Solving Skill" ></textarea>
               </label>
         </fieldset>
       </section>
