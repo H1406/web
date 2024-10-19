@@ -4,6 +4,7 @@
     padding: 0;
     font-family: sans-serif;
     box-sizing: border-box; /* Ensures padding doesn't affect element width */
+
 }
 /*Styling a changing theme button*/
 :root {
@@ -14,35 +15,14 @@
     --toggle-bg-color: #ddd;
     --toggle-text-color: black;
 }
-.theme-switch:checked ~ body {
-    --bg-color: #333;
-    --text-color: white;
-    --header-bg-color: white; /* Change header background color */
-    --header-text-color: black; /* Change header text color */
-    --toggle-bg-color: #333; /* Change toggle background color */
-    --toggle-text-color: white; /* Change toggle text color */
+body {
+    background-image: url('https://viettel.com.vn/static/images/logo-header.0ce71c2fd94a.png');
+    background-repeat: no-repeat;
+    background-position:95% 12%;
+    background-attachment: fixed;
+    background-size: 100px;
 }
-.theme{
-    position: fixed;
-    top:15%;
-    right:2%;
-}
-.theme-switch{
-    display: none;
-}
-.theme-toggle {
-    cursor: pointer;
-    padding: 10px 20px;
-    background-color: var(--toggle-bg-color);
-    color: var(--toggle-text-color);
-    border-radius: 20px;
-    color: black;
-    transition: background-color 0.3s, color 0.3s;
-}
-.theme-switch:checked + .theme-toggle {
-    background-color: #333;
-    color: white;
-  }
+
 body.about {
     display: contents;
 }
@@ -178,10 +158,6 @@ input[type="submit"]:hover {
 
     }
 
-    .application-form {
-        width: 90%;
-    }
-
     form fieldset {
         margin-bottom: 15px;
         padding: 10px;
@@ -209,11 +185,6 @@ input[type="submit"]:hover {
                 
     }
 
-    .application-form {
-        padding: 40px;
-        width: 100%;
-        padding-top: 10%;
-    }
 
     form fieldset {
         margin-bottom: 10px;
@@ -279,8 +250,7 @@ input[type="submit"]:hover {
 }
 
 .jobs-des ul, .jobs-des ol {
-
-    text-align: left;
+    text-align: center;
 }
 
 .jobs-des ul li {
@@ -333,6 +303,7 @@ dd {
 }
 .hero{
     padding-left: 10px;
+    padding-top: 78px;
     margin: 0;
     float: left;
     display: flex;
@@ -463,7 +434,7 @@ footer {
     height: 2.5rem;
 }
 .footer-jobs {
-   bottom: -950px;     /* Text color */
+   bottom: -225%;    
 }
 h2:hover {
     color: #4CAF50;
@@ -512,7 +483,22 @@ a:hover{
     border: 1;
 }
 .about_title h1{
-    background-color: red;
-    padding-top: 500px;
+    padding-top: 30px;
     color:red
+}
+
+.JobID legend{
+    padding-top: 45%;
+    padding-bottom: 2%;
+}
+.JobID label{
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+
+
+button[type="submit"]{
+    margin-top:10px;
+    text-align: center;
+    font-size: 16px;
 }
