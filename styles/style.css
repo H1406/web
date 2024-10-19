@@ -16,11 +16,12 @@
     --toggle-text-color: black;
 }
 body {
-    background-image: url('https://viettel.com.vn/static/images/logo-header.0ce71c2fd94a.png');
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVfChkd2stAm3q1meY36MkZR6sILiFA0iokw&s');
     background-repeat: no-repeat;
     background-position:95% 12%;
     background-attachment: fixed;
-    background-size: 100px;
+    background-size: 10%;
+    
 }
 
 body.about {
@@ -43,7 +44,7 @@ header.main ul {
 }
 
 header.main ul li {
-    margin:  15px;
+    margin:  1.2%;
 }
 
 header.main ul li a {
@@ -66,7 +67,7 @@ p a {
     text-decoration: none;
     color: blue;
     font-weight: bold;
-    margin-left: 150px;
+    margin-left: 20%;
 }
 
 
@@ -449,7 +450,7 @@ footer {
     height: 2.5rem;
 }
 .footer-jobs {
-   position: relative;    
+   bottom: -225%;    
 }
 h2:hover {
     color: #4CAF50;
@@ -461,8 +462,6 @@ footer p{
 .enhance{
     display: flex;
     flex-direction: column;
-    justify-items: center;
-    align-items: center;
 }
 .enhance h1{
     font-size: 50px;
@@ -512,12 +511,10 @@ a:hover{
     padding-top: 1%;
     padding-bottom: 2%;
 }
+
+
 button[type="submit"]{
     margin-top:10px;
     text-align: center;
     font-size: 16px;
-}
-.updateform{
-    margin: auto;
-    text-decoration: underline;
 }
