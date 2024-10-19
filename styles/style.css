@@ -89,19 +89,7 @@ p a {
     margin-left: 150px;
 }
 
-/* Centering the application form */
-.application-form {
-    background-color: white;
-    background-position: top;
-    padding: 30px;
-    width: 100%;
-    max-width: 600px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    border: 1px solid #e0e0e0;
-    justify-content: flex-start;
-    margin-top: 100px; /* To push the form down, so it doesn’t hide behind the header */
-}
+
 
 /* Styling the form elements */
 form {
@@ -231,9 +219,6 @@ input[type="submit"]:hover {
         margin-bottom: 10px;
         padding: 10px;
     }
-
-
-
 }
 .names{
     display: flex;
@@ -293,10 +278,8 @@ input[type="submit"]:hover {
     text-align: left;
 }
 
-.jobs-des ul,
-.jobs-des ol {
-    margin-left: 40px;
-    margin-bottom: 20px;
+.jobs-des ul, .jobs-des ol {
+
     text-align: left;
 }
 
@@ -472,13 +455,16 @@ aside {
 
 
 
+
 footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 30px;
-    }
-
+    height: 2.5rem;
+}
+.footer-jobs {
+   bottom: -950px;     /* Text color */
+}
 h2:hover {
     color: #4CAF50;
     cursor: pointer;
