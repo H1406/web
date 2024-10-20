@@ -236,10 +236,8 @@ input[type="submit"]:hover {
 }
 .jobs-des header ul li{
     text-align: left;
+    margin: 0;
 }
-
-
-
 .jobs-des h1 {
     font: small-caps bold 2.5em 'Arial', sans-serif;
     color: #333;
