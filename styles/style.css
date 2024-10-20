@@ -225,14 +225,20 @@ input[type="submit"]:hover {
 }
 /* Styling for the body and job section */
 .jobs-des {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    min-height: 100vh;
-    padding-top: 100px; /* Adds space from the top of the page */
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
     text-align: center;
 }
+.jobs-des header {
+    float: left;
+}
+.jobs-des header ul li{
+    text-align: left;
+}
+
+
 
 .jobs-des h1 {
     font: small-caps bold 2.5em 'Arial', sans-serif;
@@ -272,12 +278,14 @@ input[type="submit"]:hover {
 .jobs-des ul li {
     margin-bottom: 10px;
     font-size: 1em;
+    text-align: center;
 }
 
 .jobs-des ol li {
     margin-bottom: 10px;
     font-size: 1em;
     font-weight: bold;
+    text-align: center;
 }
 
 /* Styling Definition List */
@@ -435,14 +443,9 @@ aside {
     float: right;
     margin: 20px;
     padding: 15px;
-    float: right ;
     border: 2px solid #4CAF50; /* Colored border */
     background-color: #f9f9f9;
 }
-
-
-
-
 footer {
     position: absolute;
     bottom: 0;
@@ -521,4 +524,7 @@ button[type="submit"]{
 .updateform{
     text-decoration: underline;
     margin: auto;
+}
+.post-link{
+    margin: 0;
 }
