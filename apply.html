@@ -20,7 +20,7 @@
 <form id = "apply-form" method="POST" action = "https://mercury.swin.edu.au/it000000/formtest.php">
     <fieldset class="JobID" >
       <legend>Job</legend>
-      <label for="JobID"> Application for * <input type="text" id="JobID" maxlength="5" required > </label>
+      <label for="JobID"> Application for * <input type="text" id="JobID" pattern="\d{5}" maxlength="5" required > </label>
     </fieldset>
     <fieldset>
       <legend>Personal data</legend>
