@@ -28,7 +28,7 @@ body.about {
     display: contents;
 }
 /* Styling the header */
-header.main {
+header.main, header.update {
     position: fixed;
     top: 0;
     width: 100%;
@@ -37,26 +37,27 @@ header.main {
     z-index: 1000;
 }
 
-header.main ul {
+header.main,header.update ul {
     list-style-type: none;
     display: flex;
     justify-content: left;
 }
 
 header.main ul li {
-    margin:  1.2%;
+    margin:  2.4%;
+
+}
+header.update {
+    margin: 2.4%;
 }
 
-header.main ul li a {
+header.main, header.update ul li a {
     color: var(--header-text-color);
     text-decoration: none;
     font-weight: bold;
 }
-header.main ul li a.active {
-    color: red;
-  }
   
-header.main ul li a:hover {
+header.main, header.update ul li a:hover {
     text-decoration: underline;
     color: orange;
 }
